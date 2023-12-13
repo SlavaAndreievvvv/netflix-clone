@@ -26,20 +26,23 @@ export const Navigation = ({ className, username }: NavigationProps) => {
   };
 
   return (
-    <nav className={clsx(styles.container, className)}>
+    <header className={clsx(styles.header, className)}>
       <Container>
-        <div className={styles.wrapper}>
-          {username ? (
-            <Link className={styles.imageLinkBox} href="/home">
-              <Image src="/images/logo.svg" alt="logo" fill />
-            </Link>
-          ) : (
-            <Link className={styles.linkEnter} href="/auth">
-              Увійти
-            </Link>
-          )}
-        </div>
+        <nav className={styles.navigation}>
+          <button className={styles.mobileMenuButton}>Меню</button>
+          <div className={styles.menu} tabIndex={1}>
+            {username ? (
+              <Link className={styles.imageLinkBox} href="/home">
+                <Image src="/images/logo.svg" alt="logo" fill />
+              </Link>
+            ) : (
+              <Link className={styles.linkEnter} href="/auth">
+                Увійти
+              </Link>
+            )}
+          </div>
+        </nav>
       </Container>
-    </nav>
+    </header>
   );
 };
