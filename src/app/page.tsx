@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 export const Home = () => {
   return (
     <section className={styles.container}>
-      <Navigation username="df" className={styles.navigation} />
+      <Navigation className={styles.navigation} />
       <Container>
         <div className={styles.content}>
           <h1 className={styles.title}>Фільми та серіали</h1>
